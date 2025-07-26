@@ -1,0 +1,338 @@
+/* ==========================================================================
+   RANDOMNESS EXPLAINED - SPECIFIC STYLES
+   Using the theme.css classes as base, with page-specific overrides
+   ========================================================================== */
+
+/* ==========================================================================
+   FEUD SECTION SPECIFIC STYLES
+   ========================================================================== */
+
+.feud-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.character-name {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ff6b6b;
+}
+
+/* ==========================================================================
+   COIN FLIP SECTION SPECIFIC STYLES
+   ========================================================================== */
+
+.coin-container {
+  text-align: center;
+}
+
+.coin-flip-btn {
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  margin-bottom: 2rem;
+}
+
+.coin-flip-btn:hover {
+  transform: scale(1.05);
+}
+
+.coin-flip-btn:active {
+  transform: scale(0.95);
+}
+
+.simulation-controls-coin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.sim-input {
+  padding: 12px;
+  width: 100px;
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Georgia", serif;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(78, 205, 196, 0.5);
+  color: #e0e0e0;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.sim-input:focus {
+  outline: none;
+  border-color: #4ecdc4;
+  box-shadow: 0 0 15px rgba(78, 205, 196, 0.3);
+}
+
+/* ==========================================================================
+   MARKOV SECTION SPECIFIC STYLES
+   ========================================================================== */
+
+.markov-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.markov-controls h3,
+.markov-playground h3 {
+  font-size: 1.8rem;
+  color: #4ecdc4;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #4ecdc4;
+  padding-bottom: 0.5rem;
+}
+
+.markov-training-text {
+  min-height: 150px;
+}
+
+/* Playground Styling */
+.markov-playground.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  filter: blur(2px);
+}
+
+.predictions-box {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 8px;
+  min-height: 120px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.predictions-box ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+.predictions-box li {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.predictions-box .prob {
+  color: #ff6b6b;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.markov-generated {
+  margin-top: 1rem;
+  min-height: 80px;
+}
+
+#train-status {
+  color: #4ecdc4;
+}
+
+.text-input {
+  /* Uses .form-input from theme, with specific overrides */
+  resize: vertical;
+  min-height: 100px;
+}
+
+.generated-text {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #4ecdc4;
+  margin-top: 1rem;
+  min-height: 100px;
+  font-style: italic;
+}
+
+/* ==========================================================================
+   MONTE CARLO SECTION SPECIFIC STYLES
+   ========================================================================== */
+
+.monte-carlo-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 1rem auto;
+  font-size: 1.1rem;
+}
+
+.monte-carlo-intro.highlight-insight {
+  font-weight: bold;
+  color: #4ecdc4;
+  transform: scale(1.05);
+  transition: all 0.5s ease;
+}
+
+.solitaire-result-box {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-style: italic;
+  color: #ff6b6b;
+  min-height: 30px;
+}
+
+.simulator-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.canvas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#neutronCanvas {
+  background-color: #0a0a0a;
+  border-radius: 50%;
+  border: 3px solid #1a1a2e;
+  transition: box-shadow 0.5s ease;
+}
+
+#neutronCanvas.glowing {
+  box-shadow: 0 0 40px rgba(255, 107, 107, 0.6);
+  border-color: #ff6b6b;
+}
+
+.histogram-container {
+  margin-top: 1.5rem;
+}
+
+.histogram {
+  display: flex;
+  gap: 5px;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.hist-bar-failed,
+.hist-bar-sustained {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hist-fill {
+  width: 100%;
+  transition: height 0.5s ease;
+}
+
+.hist-bar-failed .hist-fill {
+  background: #ff6b6b;
+}
+
+.hist-bar-sustained .hist-fill {
+  background: #50fa7b;
+}
+
+.hist-label {
+  text-align: center;
+  font-size: 0.8rem;
+  padding-top: 5px;
+}
+
+.aha-moment {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: rgba(80, 250, 123, 0.1);
+  border-left: 4px solid #50fa7b;
+  color: #e0e0e0;
+}
+
+/* Status indicators specific to Monte Carlo */
+.status-sustained {
+  color: #50fa7b;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   PAGERANK SECTION SPECIFIC STYLES
+   ========================================================================== */
+
+.pagerank-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.simulation-intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  font-size: 1.1rem;
+}
+
+/* PageRank Grid Layout */
+#link-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+#link-canvas .surfer-dot {
+  fill: #ff6b6b;
+  stroke: white;
+  stroke-width: 2px;
+  transition: cx 0.2s ease, cy 0.2s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+#link-canvas line {
+  stroke: rgba(78, 205, 196, 0.5);
+  stroke-width: 3px;
+}
+
+.chart-explanation {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: rgba(224, 224, 224, 0.8);
+  text-align: center;
+}
+
+/* ==========================================================================
+   CONCLUSION SECTION SPECIFIC STYLES
+   ========================================================================== */
+
+.conclusion-text {
+  max-width: 800px;
+  margin: 1.5rem auto;
+}
+
+/* ==========================================================================
+   RESPONSIVE OVERRIDES
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .simulator-layout,
+  .markov-container,
+  .pagerank-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .feud-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .simulation-controls-coin {
+    flex-wrap: wrap;
+  }
+}
